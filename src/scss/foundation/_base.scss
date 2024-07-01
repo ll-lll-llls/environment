@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+html {}
+
+body {}
+
+body.is-unscroll {
+  overflow: hidden;
+}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@use "variables" as v;
+
+$width_desktop_min: 1025px;
+$width_mobile_max: 1024px;
+
+$breakpoints: (
+  'mobile': 'screen and (max-width: #{v.$width_mobile_max})',
+  'desktop': 'screen and (min-width: #{v.$width_desktop_min})'
+)
+!default;
+
+@mixin media_queries($breakpoint: mobile) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@use '../../global' as *;
+
+#{$prefix_utility}-hidden-desktop{
+  @include media_queries(desktop){
+    display: none;
+  }
+}
+#{$prefix_utility}-hidden-mobile{
+  @include media_queries(mobile){
+    display: none;
+  }
+}
